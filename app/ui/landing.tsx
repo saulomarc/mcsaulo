@@ -17,7 +17,7 @@ export default function Landing() {
             </div>
             <div className="w-1/2 flex justify-center mb-4">
                 <div>
-                    <Image src="/profile_pic.jpg" alt="profile_pic" className="rounded-full" width={208} height={208}/>
+                    <Image src="/images/profile_pic.jpg" alt="profile_pic" className="rounded-full" width={208} height={208}/>
                 </div>
             </div>
         </div>
