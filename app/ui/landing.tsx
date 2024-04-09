@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Landing() {
   return (
     <div className="text-white w-full flex justify-center items-center min-h-screen px-24 bg-gray-950">
@@ -14,7 +16,9 @@ export default function Landing() {
                 </div>
             </div>
             <div className="w-1/2 flex justify-center mb-4">
-                <img src="/profile_pic.jpg" alt="profile_pic" className="rounded-full h-52 w-52"/>
+                <div>
+                    <Image src="/profile_pic.jpg" alt="profile_pic" className="rounded-full" width={208} height={208}/>
+                </div>
             </div>
         </div>
     </div>

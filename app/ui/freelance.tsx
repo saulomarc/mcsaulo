@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 const features = [
     {
         name: 'Mid-level Full-Stack Web Developer',
         stack: [],
         description:
         'Our laptop sleeve is compact and precisely fits 13" devices. The zipper allows you to access the interior with ease, and the front pouch provides a convenient place for your charger cable. Our laptop sleeve is compact and precisely fits 13" devices. The zipper allows you to access the interior with ease, and the front pouch provides a convenient place for your charger cable.',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-07-detail-01.jpg',
+        imageSrc: '/images/doctrax-main.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
     {
@@ -12,7 +14,7 @@ const features = [
         stack: [],
         description:
         'We design every detail with the best materials and finishes. This laptop sleeve features durable canvas with double-stitched construction, a felt interior, and a high quality zipper that hold up to daily use.',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-07-detail-02.jpg',
+        imageSrc: '/images/amis-main.png',
         imageAlt: 'Detail of zipper pull with tan leather and silver rivet.',
     },
     {
@@ -20,7 +22,7 @@ const features = [
         stack: [],
         description:
             'Our laptop sleeve is compact and precisely fits 13" devices. The zipper allows you to access the interior with ease, and the front pouch provides a convenient place for your charger cable.',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-07-detail-01.jpg',
+        imageSrc: '/images/amis-main.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
 ]
@@ -45,12 +47,13 @@ export default function Freelance() {
 
                 <div className="mt-16 grid grid-cols-3 gap-4">
                     {features.map((feature, featureIdx) => (
-                    <div className="mb-6">
+                    <div className="mb-6" key={featureIdx}>
                         <div className="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
-                            <img
-                                src="https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg"
+                            <Image
+                                src={feature.imageSrc}
                                 alt="Drawstring top with elastic loop closure and textured interior padding."
                                 className="h-full w-full object-cover object-center"
+                                fill={true}
                             />
                         </div>
                         <p className="mt-8 text-base text-gray-500">
