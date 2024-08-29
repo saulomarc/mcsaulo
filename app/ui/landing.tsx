@@ -21,7 +21,7 @@ export default function Landing() {
                 </div>
                 <div className="w-full md:w-1/2 flex justify-center mb-4 order-1 md:order-2">
                     <div>
-                        <Image src="/images/profile_pic.jpg" alt="profile_pic" className="rounded-full border-2 border-white" width={208} height={208}/>
+                        <Image src="/images/profile_pic.jpg" alt="profile_pic" className="rounded-full border-2 border-palette-red" width={208} height={208}/>
                     </div>
                 </div>
             </div>
