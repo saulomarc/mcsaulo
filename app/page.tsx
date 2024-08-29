@@ -5,6 +5,7 @@ import Landing from "@/app/ui/landing";
 import About from "@/app/ui/about";
 import Work from "@/app/ui/work";
 import Freelance from "@/app/ui/freelance";
+import Contact from "@/app/ui/contact";
 import { Scroll } from 'next-animation';
 
 export default function Home() {
@@ -15,9 +16,7 @@ export default function Home() {
         <About />
         <Work />
         <Freelance />
-        <div className="text-white text-center h-96 overflow-x-hidden">
-          Contact
-        </div>
+        <Contact />
       </Scroll>
     </main>
   );

@@ -3,25 +3,28 @@ import Image from "next/image";
 const features = [
     {
         name: 'Mid-level Full-Stack Web Developer',
+        company: 'Digital Transformation Program, UPLB',
         stack: [],
         description:
-        'Our laptop sleeve is compact and precisely fits 13" devices. The zipper allows you to access the interior with ease, and the front pouch provides a convenient place for your charger cable.',
-        imageSrc: '/images/amis-main.png',
+        "This system, AMIS, was the project I'm most proud of. When I was an undergraduate student then, I wanted to be a part of the development team of our previous enrollment system. Little did I know that I'd be leading the team of our new one.",
+        imageSrc: '/images/amis-enrollment.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
     {
         name: 'Junior Full-Stack Web Developer',
+        company: 'Office of the Vice Chancellor for Student Affairs, UPLB',
         stack: [],
         description:
-        'We design every detail with the best materials and finishes. This laptop sleeve features durable canvas with double-stitched construction, a felt interior, and a high quality zipper that hold up to daily use.',
+        "At the height of the pandemic,  student services in UPLB are needed to be transitioned online - which was the main goal of the job. Working for this office is where the spark began - the spark to serve the University.",
         imageSrc: '/images/ovcsa-home.png',
         imageAlt: 'Detail of zipper pull with tan leather and silver rivet.',
     },
     {
         name: 'Junior Web Developer',
+        company: 'Docdelta',
         stack: [],
         description:
-            'Our laptop sleeve is compact and precisely fits 13" devices. The zipper allows you to access the interior with ease, and the front pouch provides a convenient place for your charger cable.',
+        "The first company that ever took me was Docdelta. They were the ones who introduced me to PHP which eventually became my main stack.",
         imageSrc: '/images/docdelta-main.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
@@ -33,8 +36,8 @@ function classNames(...classes: String[]) {
 
 export default function Work() {
     return (
-        <div className="bg-white" data-next-animation>
-            <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+        <div id="work" className="bg-white overflow-hidden">
+            <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8" data-next-animation>
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Work Experience</h2>
                     <p className="mt-4 text-gray-500">
@@ -59,6 +62,7 @@ export default function Work() {
                             )}
                         >
                             <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
+                            <h5 className="text-base text-gray-600">at {feature.company}</h5>
                             <p className="mt-2 text-sm text-gray-500">{feature.description}</p>
                         </div>
                         <div
@@ -67,8 +71,8 @@ export default function Work() {
                             'flex-auto lg:col-span-6 lg:row-start-1 xl:col-span-7'
                             )}
                         >
-                            <div className="aspect-h-2 aspect-w-5 overflow-hidden rounded-lg bg-gray-100">
-                            <Image src={feature.imageSrc} alt={feature.imageAlt} className="object-cover object-center" fill={true}/>
+                            <div className="aspect-h-2 aspect-w-5 overflow-hidden rounded-lg bg-gray-100 border-4 border-palette-red">
+                            <Image src={feature.imageSrc} alt={feature.imageAlt} className="object-cover object-center rounded-md" fill={true}/>
                             </div>
                         </div>
                     </div>

@@ -2,26 +2,30 @@ import Image from "next/image";
 
 const features = [
     {
-        name: 'Mid-level Full-Stack Web Developer',
+        name: 'Full-Stack Web Developer',
+        company: 'Office of the Vice Chancellor for Community Affairs, UPLB',
+        system: 'UPLB Tour Reservation and Information Processing System',
         stack: [],
         description:
-        'Our laptop sleeve is compact and precisely fits 13" devices. The zipper allows you to access the interior with ease, and the front pouch provides a convenient place for your charger cable. Our laptop sleeve is compact and precisely fits 13" devices. The zipper allows you to access the interior with ease, and the front pouch provides a convenient place for your charger cable.',
+        "My capstone project for my Master's Degree. I took this project because of its unique nature, a never before project of UP - having it's own tourism application.",
         imageSrc: '/images/doctrax-main.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
     {
-        name: 'Junior Full-Stack Web Developer',
+        name: 'Amazon Web Service Migration Consultant',
+        company: 'Auspex Research Group, UPLB',
         stack: [],
         description:
-        'We design every detail with the best materials and finishes. This laptop sleeve features durable canvas with double-stitched construction, a felt interior, and a high quality zipper that hold up to daily use.',
+        "Now I'll be honest, I have no idea how to use the AWS platform then, let alone use it to deploy an application. Still, I accepted the job and took it as a challenge to learn a new technology.",
         imageSrc: '/images/amis-main.png',
         imageAlt: 'Detail of zipper pull with tan leather and silver rivet.',
     },
     {
-        name: 'Junior Web Developer',
+        name: 'Backend Web Developer',
+        company: 'Office of the Vice Chancellor for Research and Extension, UPLB',
         stack: [],
         description:
-            'Our laptop sleeve is compact and precisely fits 13" devices. The zipper allows you to access the interior with ease, and the front pouch provides a convenient place for your charger cable.',
+        "This project was the very first project I ever did for the university, and it wasn't the last. Initially a master's course project which turned to a freelance opportunity for me and my teammates.",
         imageSrc: '/images/amis-main.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
@@ -33,8 +37,8 @@ function classNames(...classes: String[]) {
 
 export default function Freelance() {
     return (
-        <div className="bg-white" data-next-animation>
-            <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+        <div id="freelance" className="bg-white">
+            <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-full lg:px-16" data-next-animation>
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Freelance</h2>
                     <p className="mt-4 text-gray-500">
@@ -45,20 +49,23 @@ export default function Freelance() {
                     </p>
                 </div>
 
-                <div className="mt-16 grid grid-cols-3 gap-4">
+                <div className="mt-16 grid md:grid-cols-3 grid-cols-1 gap-4">
                     {features.map((feature, featureIdx) => (
-                    <div className="mb-6" key={featureIdx}>
-                        <div className="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
+                    <div className="mb-6 rounded-lg p-2" key={featureIdx}>
+                        <div className="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-md border-4 border-palette-red">
                             <Image
                                 src={feature.imageSrc}
                                 alt="Drawstring top with elastic loop closure and textured interior padding."
-                                className="h-full w-full object-cover object-center"
+                                className="object-center object-cover"
                                 fill={true}
                             />
                         </div>
-                        <p className="mt-8 text-base text-gray-500">
+                        <h3 className="mt-8 text-lg text-gray-900">
                             { feature.name }
-                        </p>
+                        </h3>
+                        <h5 className="text-sm  text-gray-600">
+                            { feature.company }
+                        </h5>
                         <p className="mt-4 text-base text-gray-500">
                             { feature.description }
                         </p>
