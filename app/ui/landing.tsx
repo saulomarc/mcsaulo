@@ -15,13 +15,13 @@ export default function Landing() {
                     <div className="text-3xl">
                         Full-Stack Web Developer
                     </div>
-                    <button className="rounded-lg px-2 py-1 bg-green-800 mt-2">
+                    <button className="rounded-lg px-2 py-1 bg-palette-red mt-2">
                         Download CV
                     </button>
                 </div>
                 <div className="w-full md:w-1/2 flex justify-center mb-4 order-1 md:order-2">
                     <div>
-                        <Image src="/images/profile_pic.jpg" alt="profile_pic" className="rounded-full border-2 border-palette-red" width={208} height={208}/>
+                        <Image src="/images/profile_pic.jpg" alt="profile_pic" className="rounded-full border-4 border-palette-red" width={208} height={208}/>
                     </div>
                 </div>
             </div>
