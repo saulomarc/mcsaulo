@@ -4,15 +4,19 @@ const features = [
     {
         name: 'Mid-level Full-Stack Web Developer',
         company: 'Digital Transformation Program, UPLB',
+        system: 'Academic Management Information System (AMIS)',
+        date: 'April 2022 - Present',
         stack: [],
         description:
-        "This system, AMIS, was the project I'm most proud of. When I was an undergraduate student then, I wanted to be a part of the development team of our previous enrollment system. Little did I know that I'd be leading the team of our new one.",
+        "This system, AMIS, was the project I'm most proud of. Back when I was an undergraduate student, I wanted to be a part of the development team of our enrollment system. Little did I know that I'd be leading the team of our new one.",
         imageSrc: '/images/amis-enrollment.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
     {
         name: 'Junior Full-Stack Web Developer',
         company: 'Office of the Vice Chancellor for Student Affairs, UPLB',
+        system: 'Office of Student Affairs Management System (OSAM)',
+        date: 'April 2020 - March 2022',
         stack: [],
         description:
         "At the height of the pandemic,  student services in UPLB are needed to be transitioned online - which was the main goal of the job. Working for this office is where the spark began - the spark to serve the University.",
@@ -22,9 +26,11 @@ const features = [
     {
         name: 'Junior Web Developer',
         company: 'Docdelta',
+        system: 'Docdelta',
+        date: 'November 2019 - February 2020',
         stack: [],
         description:
-        "The first company that ever took me was Docdelta. They were the ones who introduced me to PHP which eventually became my main stack.",
+        "The first company I worked for was Docdelta. They were the ones who introduced me to PHP which eventually became my main stack. Their main product is a data insights platform, which caters for healthcare providers in the United States.",
         imageSrc: '/images/docdelta-main.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
@@ -61,8 +67,9 @@ export default function Work() {
                             'mt-6 lg:col-span-6 lg:row-start-1 lg:mt-0 xl:col-span-5'
                             )}
                         >
-                            <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
-                            <h5 className="text-base text-gray-600">at {feature.company}</h5>
+                            <h3 className="text-base text-palette-very-light-blue rounded-md bg-palette-red px-2 py-1 w-fit">{feature.system}</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mt-2">{feature.name}</h3>
+                            <h5 className="text-xs text-gray-800">at {feature.company} <span className="italic text-gray-600">({feature.date})</span></h5>
                             <p className="mt-2 text-sm text-gray-500">{feature.description}</p>
                         </div>
                         <div

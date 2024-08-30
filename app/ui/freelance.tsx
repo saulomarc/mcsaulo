@@ -1,31 +1,37 @@
 import Image from "next/image";
 
-const features = [
-    {
+const freelance_main = {
         name: 'Full-Stack Web Developer',
         company: 'Office of the Vice Chancellor for Community Affairs, UPLB',
-        system: 'UPLB Tour Reservation and Information Processing System',
+        system: 'Tour Reservation and Information Processing System (TRIPS)',
+        date: 'December 2023 - Present',
         stack: [],
         description:
         "My capstone project for my Master's Degree. I took this project because of its unique nature, a never before project of UP - having it's own tourism application.",
         imageSrc: '/images/doctrax-main.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
-    },
+}
+
+const freelance_sub = [
     {
         name: 'Amazon Web Service Migration Consultant',
         company: 'Auspex Research Group, UPLB',
+        system: '',
+        date: 'January 2023 - June 2023',
         stack: [],
         description:
-        "Now I'll be honest, I have no idea how to use the AWS platform then, let alone use it to deploy an application. Still, I accepted the job and took it as a challenge to learn a new technology.",
+        "You'd think that when I took this job that I have an idea how to use the AWS platform, well you're wrong. Back then have no idea how to use the AWS platform, let alone use it to deploy an application. Still, I accepted this and took it as a challenge to learn a new technology, and I did.",
         imageSrc: '/images/amis-main.png',
         imageAlt: 'Detail of zipper pull with tan leather and silver rivet.',
     },
     {
         name: 'Backend Web Developer',
         company: 'Office of the Vice Chancellor for Research and Extension, UPLB',
+        system: 'Document Tracking System (Doctrax)',
+        date: 'September 2019 - May 2021',
         stack: [],
         description:
-        "This project was the very first project I ever did for the university, and it wasn't the last. Initially a master's course project which turned to a freelance opportunity for me and my teammates.",
+        "This project was the very first project I ever did for the university, and it wasn't the last. Doctrax was actually a final output for one of my master's courses, which eventually became the university's official document tracking system.",
         imageSrc: '/images/amis-main.png',
         imageAlt: 'White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.',
     },
@@ -42,33 +48,66 @@ export default function Freelance() {
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Freelance</h2>
                     <p className="mt-4 text-gray-500">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas, neque ut faucibus pharetra, ante ipsum vulputate orci, 
-                        at aliquam urna massa eu ex. Aliquam id libero id justo pulvinar eleifend eget a neque. Praesent arcu purus, efficitur eu nunc sit amet, 
-                        congue aliquet quam. Ut ut dapibus ante, eu luctus ipsum. Cras vitae blandit velit. Fusce elit risus, viverra vitae tortor blandit, 
-                        sodales interdum ante. Nulla convallis interdum laoreet. Morbi accumsan rhoncus ex, eget tincidunt leo varius ut.
+                        Aside from my full-time job, I also take side-hustles, consultancy or system projects to learn new technologies and build my portfolio. So far, I have these three unique projects and consultancy gigs on my slate
                     </p>
                 </div>
 
-                <div className="mt-16 grid md:grid-cols-3 grid-cols-1 gap-4">
-                    {features.map((feature, featureIdx) => (
-                    <div className="mb-6 rounded-lg p-2" key={featureIdx}>
-                        <div className="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-md border-4 border-palette-red">
+                <div className="mt-16 flex justify-center">
+                    <div className="mb-6 rounded-lg p-2 w-full md:w-3/4">
+                        <div className="h-96 w-full relative rounded-md border-4 border-palette-red">
                             <Image
-                                src={feature.imageSrc}
+                                src={freelance_main.imageSrc}
                                 alt="Drawstring top with elastic loop closure and textured interior padding."
-                                className="object-center object-cover"
+                                layout="fill"
+                                className="object-cover"
+                            />
+                        </div>
+                        <div className="mt-4">
+                            {
+                                freelance_main.system ? (
+                                    <h3 className="text-base text-palette-very-light-blue rounded-md bg-palette-red px-2 py-1 w-fit mt-2">{freelance_main.system}</h3>
+                                ) : ''
+                            }
+                            <h3 className="mt-2 text-lg text-gray-900">
+                                { freelance_main.name }
+                            </h3>
+                            <h5 className="text-xs text-gray-800">
+                                at { freelance_main.company } <span className="italic text-gray-600">({freelance_main.date})</span>
+                            </h5>
+                            <p className="mt-4 text-sm text-gray-500">
+                                { freelance_main.description }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="mt-4 grid md:grid-cols-2 grid-cols-1 gap-4">
+                    {freelance_sub.map((freelanceSub, freelanceSubIdx) => (
+                    <div className="mb-6 rounded-lg p-2" key={freelanceSubIdx}>
+                        <div className="aspect-w-2 aspect-h-1 rounded-md border-4 border-palette-red">
+                            <Image
+                                src={freelanceSub.imageSrc}
+                                alt="Drawstring top with elastic loop closure and textured interior padding."
+                                className="h-20 w-20 object-center object-cover"
                                 fill={true}
                             />
                         </div>
-                        <h3 className="mt-8 text-lg text-gray-900">
-                            { feature.name }
-                        </h3>
-                        <h5 className="text-sm  text-gray-600">
-                            { feature.company }
-                        </h5>
-                        <p className="mt-4 text-base text-gray-500">
-                            { feature.description }
-                        </p>
+                        <div className="mt-4">
+                            {
+                                freelanceSub.system ? (
+                                    <h3 className="text-base text-palette-very-light-blue rounded-md bg-palette-red px-2 py-1 w-fit mt-2">{freelanceSub.system}</h3>
+                                ) : ''
+                            }
+                            <h3 className="mt-2 text-lg text-gray-900">
+                                { freelanceSub.name }
+                            </h3>
+                            <h5 className="text-xs text-gray-600">
+                                at { freelanceSub.company } <span className="italic text-gray-600">({freelanceSub.date})</span>
+                            </h5>
+                            <p className="mt-4 text-sm text-gray-500">
+                                { freelanceSub.description }
+                            </p>
+                        </div>
                     </div>
                 ))}
                 </div>

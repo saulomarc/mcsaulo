@@ -7,7 +7,6 @@ const navigation = [
   { name: 'Home', href: '#', current: true },
   { name: 'About', href: '#about', current: false },
   { name: 'Work', href: '#work', current: false },
-  { name: 'Freelance', href: '#freelance', current: false },
   { name: 'Education', href: '#education', current: false },
   { name: 'Contact', href: '#contact', current: false },
 ]
@@ -18,7 +17,7 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="w-full bg-gray-900 fixed z-10">
+    <Disclosure as="nav" className="w-full bg-gray-900 fixed z-10 shadow-lg drop-shadow-lg">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
